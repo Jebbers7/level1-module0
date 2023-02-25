@@ -6,25 +6,38 @@ import unittest
 
 # TODO Complete the function so it returns a list of any 5 items
 def test_1_create_a_list():
-    return None
+    list = [4, 6, 'hi', 8, 'bye']
+    return list
 
 
 # TODO Complete the function so it returns a list of numbers from 0 to 20
 #  with both numbers 0 and 20 included in the list
 def test_2_generate_a_list():
-    return list()
+    list1 = list()
+    for i in range(21):
+        list1.append(i)
+
+    return list1
 
 
 # TODO Complete the function so it returns the product of all the numbers in
 #  the list multiplied together
 def test_3_product(list_1):
-    return None
+    total = 1
+    for i in range(len(list_1)):
+        total = total * list_1[i]
+
+    return total
 
 
 # TODO Complete the function so it returns a list with all the elements from
 #  list_1 followed by items in list_2
 def test_4_combine_lists(list_1, list_2):
-    return list()
+    for i in range(len(list_2)):
+        list_1.append(list_2[i])
+
+    return list_1
+
 
 # ======================= DO NOT EDIT THE CODE BELOW =========================
 
