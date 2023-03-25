@@ -22,9 +22,9 @@ def add_guest(list_of_guests):
 #         c. Return the list_of_guests
 def remove_guest(list_of_guests):
     removeName = simpledialog.askstring("Remove", "What is the name of the guest you would like to remove?")
-    for index in list_of_guests:
-        if list_of_guests(index) == removeName:
-            list_of_guests.remove(removeName)
+    for i in range(len(list_of_guests)):
+        if list_of_guests[i] == removeName:
+            del list_of_guests[i]
 
     return list_of_guests
 
@@ -37,8 +37,7 @@ def remove_guest(list_of_guests):
 def print_guests(list_of_guests):
     if bool(list_of_guests):
         for index in range(len(list_of_guests)):
-           guestList = "Guest " + (index + 1) + ". " + str(list_of_guests[index])
-        messagebox.showinfo("List of guests", "Guest 1. " + list_of_guests[0])
+            messagebox.showinfo("List of guests", "Guest " + str(index + 1) + ". " + list_of_guests[index])
     else:
         messagebox.showinfo("Guests", "There are no guests")
 # ======================= DO NOT EDIT THE CODE BELOW =========================
